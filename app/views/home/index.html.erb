@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<% if current_user.nil? %>
+  <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+<% else %>
+  <%= link_to home_index_path, class: 'login-button' do %>Go to App<% end %>
+  <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+<% end %>
+
+<h1>Homes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homes.each do |home| %>
+      <tr>
+        <td><%= home.index %></td>
+        <td><%= link_to 'Show', home %></td>
+        <td><%= link_to 'Edit', edit_home_path(home) %></td>
+        <td><%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Home', new_home_path %>
