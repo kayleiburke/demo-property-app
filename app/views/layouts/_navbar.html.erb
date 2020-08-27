@@ -25,31 +25,36 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user.nil? %>
         <!-- Login -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="fa fa-fw fa-lock"></i> Login
-          </a>
-          <div class="dropdown-menu dropdown-size-280">
-            <form>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <input type="text" class="form-control" placeholder="Username">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-fw fa-lock"></i> Login
+            </a>
+            <div class="dropdown-menu dropdown-size-280">
+              <%= form_for(:user) do |f| %>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Username" %>
+                  </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-shield"></i></span>
-                  <input type="password" class="form-control" placeholder="Password">
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-shield"></i></span>
+                    <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Password" %>
+                  </div>
                 </div>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
-              </div>
-            </form>
-          </div>
-        </li>
+
+                <div class="text-center">
+                  <%= f.submit "Log in" %>
+                </div>
+              <% end %>
+
+            </div>
+          </li>
+        <% end %>
         <!-- // END login -->
         <!-- Sign up -->
         <li class="dropdown">
@@ -85,18 +90,26 @@
           </div>
         </li>
         <!-- // END sign up -->
-        <!-- user -->
-        <li class="dropdown user">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <%= image_tag "people/110/guy-6.jpg", class: "img-circle" %> Bill<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
-            <li><a href="#"><i class="fa fa-wrench"></i>Settings</a></li>
-            <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
-          </ul>
-        </li>
-        <!-- // END user -->
+        <% if !current_user.nil? %>
+          <!-- user -->
+          <li class="dropdown user">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= image_tag "people/110/guy-6.jpg", class: "img-circle" %> Bill<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+              <li><a href="#"><i class="fa fa-wrench"></i>Settings</a></li>
+
+                <li>
+                  <%= link_to(destroy_user_session_path, method: :delete) do %>
+                    <i class="fa fa-sign-out"></i>
+                    Logout
+                  <% end %>
+                </li>
+            </ul>
+          </li>
+          <!-- // END user -->
+        <% end %>
       </ul>
     </div>
     <!-- /.navbar-collapse -->

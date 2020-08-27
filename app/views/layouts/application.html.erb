@@ -18,9 +18,7 @@
           <% end %>
       </script>
     <% end %>
-    <% if current_user.nil? %>
-      <%= render "layouts/navbar" %>
-    <% end %>
+    <%= render "layouts/navbar" %>
 
     <%= yield %>
   </body>
