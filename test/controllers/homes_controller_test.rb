@@ -1,48 +1,48 @@
 require 'test_helper'
 
-class HomesControllerTest < ActionDispatch::IntegrationTest
+class AccountsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @home = homes(:one)
+    @account = accounts(:one)
   end
 
   test "should get index" do
-    get homes_url
+    get accounts_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_home_url
+    get new_account_url
     assert_response :success
   end
 
-  test "should create home" do
-    assert_difference('Home.count') do
-      post homes_url, params: { home: { index: @home.index } }
+  test "should create accounts" do
+    assert_difference('Account.count') do
+      post accounts_url, params: {accounts: {index: @account.index } }
     end
 
-    assert_redirected_to home_url(Home.last)
+    assert_redirected_to account_url(Account.last)
   end
 
-  test "should show home" do
-    get home_url(@home)
+  test "should show accounts" do
+    get account_url(@account)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_home_url(@home)
+    get edit_account_url(@account)
     assert_response :success
   end
 
-  test "should update home" do
-    patch home_url(@home), params: { home: { index: @home.index } }
-    assert_redirected_to home_url(@home)
+  test "should update accounts" do
+    patch account_url(@account), params: {accounts: {index: @account.index } }
+    assert_redirected_to account_url(@account)
   end
 
-  test "should destroy home" do
-    assert_difference('Home.count', -1) do
-      delete home_url(@home)
+  test "should destroy accounts" do
+    assert_difference('Account.count', -1) do
+      delete account_url(@account)
     end
 
-    assert_redirected_to homes_url
+    assert_redirected_to accounts_url
   end
 end

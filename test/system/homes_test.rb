@@ -1,43 +1,43 @@
 require "application_system_test_case"
 
-class HomesTest < ApplicationSystemTestCase
+class AccountsTest < ApplicationSystemTestCase
   setup do
-    @home = homes(:one)
+    @account = accounts(:one)
   end
 
   test "visiting the index" do
-    visit homes_url
-    assert_selector "h1", text: "Homes"
+    visit accounts_url
+    assert_selector "h1", text: "Accounts"
   end
 
-  test "creating a Home" do
-    visit homes_url
-    click_on "New Home"
+  test "creating a Account" do
+    visit accounts_url
+    click_on "New Account"
 
-    fill_in "Index", with: @home.index
-    click_on "Create Home"
+    fill_in "Index", with: @account.index
+    click_on "Create Account"
 
-    assert_text "Home was successfully created"
+    assert_text "Account was successfully created"
     click_on "Back"
   end
 
-  test "updating a Home" do
-    visit homes_url
+  test "updating a Account" do
+    visit accounts_url
     click_on "Edit", match: :first
 
-    fill_in "Index", with: @home.index
-    click_on "Update Home"
+    fill_in "Index", with: @account.index
+    click_on "Update Account"
 
-    assert_text "Home was successfully updated"
+    assert_text "Account was successfully updated"
     click_on "Back"
   end
 
-  test "destroying a Home" do
-    visit homes_url
+  test "destroying a Account" do
+    visit accounts_url
     page.accept_confirm do
       click_on "Destroy", match: :first
     end
 
-    assert_text "Home was successfully destroyed"
+    assert_text "Account was successfully destroyed"
   end
 end

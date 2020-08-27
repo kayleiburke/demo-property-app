@@ -18,6 +18,10 @@
           <% end %>
       </script>
     <% end %>
+    <% if current_user.nil? %>
+      <%= render "layouts/navbar" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
