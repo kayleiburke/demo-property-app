@@ -32,7 +32,7 @@
               <i class="fa fa-fw fa-lock"></i> Login
             </a>
             <div class="dropdown-menu dropdown-size-280">
-              <%= form_for(:user) do |f| %>
+              <%= form_for(:user, url: new_user_session_path) do |f| %>
                 <div class="form-group">
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="text-center">
-                  <%= f.submit "Log in" %>
+                  <%= f.submit "Log in", class: "btn btn-primary" %>
                 </div>
               <% end %>
 
