@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="st-layout ls-top-navbar ls-bottom-footer show-sidebar sidebar-l1 sidebar-r1-xs">
   <head>
     <title>PropertyApp</title>
     <%= csrf_meta_tags %>
@@ -18,8 +18,12 @@
           <% end %>
       </script>
     <% end %>
-    <%= render "layouts/navbar" %>
 
-    <%= yield %>
+    <!-- Wrapper required for sidebar transitions -->
+    <div class="st-container">
+      <%= render "layouts/navbar" %>
+      <%= render "layouts/sidebar" %>
+    </div>
+
   </body>
 </html>

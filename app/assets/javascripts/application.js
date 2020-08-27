@@ -15,6 +15,7 @@
 //= require activestorage
 //= require toastr
 //= require turbolinks
+//= require js.cookie
 // require_tree .
-//= require "themekit/app/all.js"
+//= require "themekit/app/app.js"
 //= require "themekit/vendor/all.js"
