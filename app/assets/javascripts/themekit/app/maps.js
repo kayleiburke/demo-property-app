@@ -261,7 +261,7 @@ function loadScript() {
 window.onload = loadScript;
 
 function initScripts() {
-    var $scripts = [
+    /*var $scripts = [
         "js/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.js",
         "js/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.extensions.js",
         "js/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.services.js",
@@ -279,7 +279,7 @@ function initScripts() {
 
         scriptNode.src = v;
         $('head').prepend($(scriptNode));
-    });
+    });*/
 
     $.extend($.ui.gmap.prototype, {
         pagination: function (prop, mapData) {

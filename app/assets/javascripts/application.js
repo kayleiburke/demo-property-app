@@ -9,13 +9,11 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 //= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require toastr
 //= require turbolinks
-//= require js.cookie
+//= require underscore
+//= require gmaps/google
 // require_tree .
-//= require "themekit/app/app.js"
-//= require "themekit/vendor/all.js"

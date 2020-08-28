@@ -1,0 +1,9 @@
+//= require "./themekit/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.js"
+//= require "./themekit/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.extensions.js"
+//= require "./themekit/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.services.js"
+//= require "./themekit/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.microdata.js"
+//= require "./themekit/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.microformat.js"
+//= require "./themekit/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.overlays.js"
+//= require "./themekit/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.rdfa.js"
+/*//= require "./themekit/vendor/maps/google/jquery-ui-map/addons/infobox_packed.js" */
+//= require "./themekit/vendor/maps/google/jquery-ui-map/addons/markerclusterer.min.js"

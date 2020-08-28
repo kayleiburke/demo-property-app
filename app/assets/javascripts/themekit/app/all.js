@@ -201,7 +201,7 @@
         if (typeof $.fn.slick == 'undefined') return;
 
         var c = this;
-        
+
         c.slick({
             dots: true,
             slidesToShow: c.data('items') || 3,
@@ -3256,18 +3256,18 @@ module.exports = function () {
 
 };
 },{}],"/Code/html/themes/themekit/lib/maps/js/google/main.js":[function(require,module,exports){
-function loadScript() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
-    'callback=initGoogleMaps';
-    document.body.appendChild(script);
-}
-
-window.onload = loadScript;
+// function loadScript() {
+//     var script = document.createElement('script');
+//     script.type = 'text/javascript';
+//     script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+//     'callback=initGoogleMaps&key=AIzaSyDyEFvrrczmXtglTZqcUuVjJLfxlgwzbg0';
+//     document.body.appendChild(script);
+// }
+//
+// window.onload = loadScript;
 
 function initScripts() {
-    var $scripts = [
+    /*var $scripts = [
         "js/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.js",
         "js/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.extensions.js",
         "js/vendor/maps/google/jquery-ui-map/ui/jquery.ui.map.services.js",
@@ -3285,7 +3285,7 @@ function initScripts() {
 
         scriptNode.src = v;
         $('head').prepend($(scriptNode));
-    });
+    });*/
 
     $.extend($.ui.gmap.prototype, {
         pagination: function (prop, mapData) {
