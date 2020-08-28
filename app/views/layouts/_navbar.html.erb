@@ -54,7 +54,7 @@
 
             </div>
           </li>
-        <% end %>
+
         <!-- // END login -->
         <!-- Sign up -->
         <li class="dropdown">
@@ -62,35 +62,39 @@
             <i class="fa fa-fw fa-plus"></i> Sign Up
           </a>
           <div class="dropdown-menu dropdown-size-280">
-            <form>
+            <%= form_for(:user, url: user_registration_path) do |f| %>
+              <!--%= render "devise/shared/error_messages", resource: :user %-->
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group form-control-default">
-                    <label for="exampleInputFirstName">First name</label>
-                    <input type="email" class="form-control" id="exampleInputFirstName" placeholder="Your first name">
+                    <%= f.label :first_name %>
+                    <%= f.text_field :first_name, autofocus: true, placeholder: "Your first name", class: "form-control" %>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group form-control-default">
-                    <label for="exampleInputLastName">Last name</label>
-                    <input type="email" class="form-control" id="exampleInputLastName" placeholder="Your last name">
+                    <%= f.label :last_name %>
+                    <%= f.text_field :last_name, autofocus: true, placeholder: "Your last name", class: "form-control" %>
                   </div>
                 </div>
               </div>
               <div class="form-group form-control-default required">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                <%= f.label :email %>
+                <%= f.text_field :email, autofocus: true, placeholder: "Enter email", class: "form-control", autocomplete: :email %>
               </div>
               <div class="form-group form-control-default required">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Password" %>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+              <div class="actions">
+                <%= f.submit "Sign up", class: "btn btn-primary" %>
+              </div>
+            <% end %>
           </div>
         </li>
-        <!-- // END sign up -->
-        <% if !current_user.nil? %>
+        <% else %>
           <!-- user -->
           <li class="dropdown user">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
