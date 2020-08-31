@@ -12,7 +12,8 @@
  *
  *  require_tree .
  *  require_self
- */
 
-@import "themekit/vendor/all.css";
-@import "themekit/app/app.css";
+ *= require font-awesome
+ *= require ./themekit/vendor/all.css
+ *= require ./themekit/app/app.css
+ */
