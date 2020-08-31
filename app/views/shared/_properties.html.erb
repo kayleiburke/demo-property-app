@@ -5,7 +5,7 @@
       <div class="ribbon-heading text-h5 ribbon-default inline margin-none left absolute">Sale</div>
       <div class="cover hover overlay margin-none">
         <%= image_tag property.property_images.first, class: "img-responsive" %>
-        <a href="front-property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
+        <a href="pages/property.html" class="overlay overlay-full overlay-bg-black overlay-hover">
               <span class="v-center">
                   <span class="btn btn-circle btn-white"><i class="fa fa-eye"></i></span>
               </span>
@@ -23,7 +23,7 @@
         <p><%= truncate(property.description, length: 200) %></p>
         <span class="label label-grey-100"><%= number_to_currency(property.price) %></span>
         <i class="small fa fa-fw icon-home-fill-1" data-toggle="tooltip" data-title="Agency"></i>
-        <a href="front-property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
+        <a href="pages/front-property.html" class="btn btn-primary btn-circle absolute bottom right"><i class="fa fa-shopping-cart"></i></a>
       </div>
     </div>
   </div>
