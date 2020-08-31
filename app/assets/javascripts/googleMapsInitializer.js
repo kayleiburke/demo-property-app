@@ -16,7 +16,6 @@ handler.buildMap({
             'scrollwheel': false,
             'draggable': false,
             'mapTypeId': google.maps.MapTypeId[ "ROADMAP" ],
-            'zoom': 16
         },
         internal: {
             id: 'google-fs-realestate'
@@ -37,6 +36,7 @@ handler.buildMap({
         ]);
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
+        handler.getMap().setZoom(16);
     }
 )
 
