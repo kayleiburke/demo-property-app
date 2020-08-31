@@ -15,6 +15,7 @@
 
  *= require font-awesome
  *= require material_icons
+ *= require toastr
  *= require ./themekit/vendor/all.css
  *= require ./themekit/app/app.css
  */
