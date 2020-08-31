@@ -8,12 +8,15 @@ gem 'toastr-rails'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'material_icons'
+gem 'faker'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem "js_cookie_rails"
 gem "bower-rails"
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'aws-sdk-s3'
+gem 'down'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # use postgres as db

@@ -16,4 +16,10 @@
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
+//= require activestorage
+
 // require_tree .
+
+toastr.options = {
+    "closeButton": true
+};
