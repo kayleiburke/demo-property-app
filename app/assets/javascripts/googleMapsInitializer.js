@@ -46,11 +46,6 @@ google.maps.event.addListener(handler.getMap(), 'click', function(event) {
 });
 
 function placeMarker(location) {
-    /*var marker = new google.maps.Marker({
-        position: location,
-        map: handler.getMap()
-    });*/
-
     markers = handler.addMarkers([
         {
             "lat": location.lat(),
