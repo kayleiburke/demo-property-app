@@ -7,6 +7,7 @@ gem 'devise'
 gem 'toastr-rails'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'material_icons'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem "js_cookie_rails"

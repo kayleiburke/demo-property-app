@@ -14,6 +14,7 @@
  *  require_self
 
  *= require font-awesome
+ *= require material_icons
  *= require ./themekit/vendor/all.css
  *= require ./themekit/app/app.css
  */
