@@ -1,24 +1,11 @@
-# README
+# Demo Propery App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This site is a WIP small project built to showcase some web development skills. It is a Ruby on Rails application built on top of an HTML/CSS/JS theme from [ThemeKit](https://themeforest.net/item/themekit-bootstrap-admin-theme-kit/6767145)
 
-Things you may want to cover:
+The live demo site can be accessed at: https://property-app-demo.herokuapp.com
 
-* Ruby version
+## Login
+A default user has been created.  The login information is below.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- **Username:**  test@test.com
+- **Password:** \password
