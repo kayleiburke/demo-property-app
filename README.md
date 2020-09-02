@@ -8,4 +8,4 @@ The live demo site can be accessed at: https://property-app-demo.herokuapp.com
 A default user has been created.  The login information is below.
 
 - **Username:**  test@test.com
-- **Password:** \password
+- **Password:** password
