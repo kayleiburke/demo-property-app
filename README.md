@@ -1,6 +1,6 @@
 # Demo Propery App
 
-This site is a WIP small project built to showcase some web development skills. It is a Ruby on Rails application that utilizeds a HTML/CSS/JS theme from [ThemeKit](https://themeforest.net/item/themekit-bootstrap-admin-theme-kit/6767145)
+This site is a WIP small project built to showcase some web development skills. It is a Ruby on Rails application that utilizes a HTML/CSS/JS theme from [ThemeKit](https://themeforest.net/item/themekit-bootstrap-admin-theme-kit/6767145)
 
 The live demo site can be accessed at: https://property-app-demo.herokuapp.com
 
